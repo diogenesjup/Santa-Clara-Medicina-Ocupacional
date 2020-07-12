@@ -1,0 +1,279 @@
+/*
+	DIOGENES JUNIOR
+	CONTATO@DIOGENESJUNIOR.COM.BR
+	
+*/
+
+/*---------------------------------
+	RESETS
+-----------------------------------*/
+
+html,body{
+    height: 100%;
+}
+body{
+	overflow-x: hidden;
+    background:#fff;
+    font-family: Arial;
+}
+
+@media(max-width: 540px){
+  html,body{
+    max-width: 100% !important;
+    
+  }
+}
+
+
+@font-face {
+    font-family: 'andisregular';
+    src: url('fonts/jam_type_design_-_andis_regular-webfont.woff2') format('woff2'),
+         url('fonts/jam_type_design_-_andis_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/*---------------------------------
+	IMPORTS E CONSULTAS E MOBILE
+	
+XS = < 544px
+SM = > 544px
+MD = > 768px
+LG = > 992px
+XL = > 1200px
+
+CSS GRID
+-----------------------------------*/
+
+
+.wow {
+   visibility: hidden;
+}
+::selection { background: #757575; color: #fff; } ::-moz-selection { background: #757575; color: #fff; }
+
+
+.text-center{
+  text-align: center;
+}
+
+.text-right{
+  text-align: right;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+
+@font-face {
+    font-family: 'andisregular';
+    src: url('../fonts/jam_type_design_-_andis_regular-webfont.woff2') format('woff2'),
+         url('../fonts/jam_type_design_-_andis_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+a.link,
+a.link:hover{
+  position: relative;
+  display: block;
+  width: 160px;
+  padding: 6px;
+  padding-left: 21px;
+  padding-right: 22px;
+  background: url(../images/seta.png) transparent no-repeat;
+  background-size: 100% 100%;
+  text-align: left;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'andisregular';
+  margin-top: 15px;
+}
+
+/*---------------------------------
+	HEADER
+-----------------------------------*/
+header{
+  position: relative;
+  display: block;
+  background: #fff;
+  width:100%;
+  height: auto;
+  z-index: 10;
+}
+
+header .logo{
+  padding-top: 0px;
+  padding-bottom: 10px;
+}
+
+header .logo img{
+  widows: 150px;
+  height: auto;
+}
+
+header .menu-principal{
+  text-align: right;
+  height: 38px;
+  padding-top: 29px;
+}
+
+header .menu-principal nav ul{
+  display: inline;
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
+header .menu-principal nav ul li{
+    list-style: none;
+    display:inline-block;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 27px;
+    margin-left: 15px;
+}
+
+header .menu-principal nav ul li a{
+  display: block;
+  text-decoration: none;
+  color: #000000;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+  -webkit-transition:all 300ms ease;-moz-transition:all 300ms ease;transition:all 300ms ease;
+}
+
+header .menu-principal nav ul li a:hover,
+header .menu-principal nav ul li.ativo a{
+  color: #fe0300;
+  text-decoration: none;
+  -webkit-transition:all 300ms ease;-moz-transition:all 300ms ease;transition:all 300ms ease;
+}
+
+
+header .menu-principal nav ul li.ativo{
+  border-bottom: 4px solid #fe0300;
+}
+
+header .menu-principal nav ul li.menu-simples:last-child{
+  padding-left: 28px;
+}
+
+
+header .menu-principal nav ul li:last-child i{
+  font-size: 20px;
+}
+
+
+
+/* Hide Dropdowns by Default */
+header .menu-principal nav ul ul {
+    display: none;
+    position: absolute;
+    top: 70px;
+    /* left: 0; */
+    margin-left: -75px;
+    background: #fff;
+    padding: 16px;
+    text-align: left;
+    /* line-height: 24px; */
+}
+  
+/* Display Dropdowns on Hover */
+header .menu-principal nav ul li:hover > ul {
+  display:block;
+}
+
+  
+/* Fisrt Tier Dropdown */
+header .menu-principal nav ul ul li {
+  width:170px;
+  float:none;
+  display:list-item;
+  position: relative;
+}
+
+
+header .menu-principal nav ul ul li a,
+header .menu-principal nav ul ul li a:hover{
+  color: #000;
+  text-decoration: none;
+  font-family: Arial;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 27px !important;
+  -webkit-transition:all 300ms ease;-moz-transition:all 300ms ease;transition:all 300ms ease;
+}
+
+header .menu-principal nav ul ul li a:hover{
+  color: #fe0300;
+  -webkit-transition:all 300ms ease;-moz-transition:all 300ms ease;transition:all 300ms ease;
+}
+
+
+/* Second, Third and more Tiers */
+header .menu-principal nav ul ul ul li {
+  position: relative;
+  top:-60px; 
+  left:170px;
+}
+
+/*---------------------------------
+  SUPER BANNER
+-----------------------------------*/
+section.super-banner{
+  position: relative;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 530px;
+  background: #f2f2f2;
+}
+
+section.super-banner .item{
+  width:100%;
+  height: 530px;
+}
+
+section.super-banner .item .caption{
+  position: absolute;
+  display: block;
+  left: 14%;
+  top: 100px;
+  z-index: 100;
+  width: 400px;
+  height: auto;
+  max-height: 400px;
+  background: rgba(255,255,255,0.80);
+  padding: 20px;
+}
+
+section.super-banner .item .caption h2{
+    font-family: 'andisregular';
+    color: #040006;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 38px;
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 20px;
+}
+
+section.super-banner .item .caption h2 span{
+  font-family: 'andisregular';
+  color: #fc0017;
+  font-weight: 600;
+}
+
+section.super-banner .item .caption p{
+    font-family: 'andisregular';
+    color: #040006;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+}
