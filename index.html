@@ -28,26 +28,31 @@
     <!-- OWL CAROUSEL -->
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <div class="container">
-            <div class="row">
-                
-                <!-- LOGO -->
-                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 logo">
-                    <a href="#" title="Santa Clara - Saúde Ocupacional">
-                        <img src="images/logo.png" alt="Santa Clara Logo">
-                    </a>
-                </div>
-                <!-- LOGO -->
-                
-                <!-- MENU DESKTOP -->
-                <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-12 menu-principal">
-                    <nav>
+    <!-- MASCARA -->
+    <div class="mascara">
+        &nbsp;
+    </div>
+    <!-- MASCARA -->
+
+    <!-- MENU FLUTUANTE -->
+    <div class="menu-flutuante">
+         <div class="fechar-menu">
+                <a href="javascript:void(0)" title="Fechar busca" onclick="abrirFecharMenu()">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </a>
+         </div>
+         <div class="conteudo-menu-flutuante">
+             <p>
+                 <img src="images/logo.png" alt="Santa Clara Logo">
+             </p>
+                  <nav>
                         <ul>
                             <li class="ativo"><a href="#" title="Home">Home</a></li>
                             <li class="menu-simples"><a href="#" title="A Clínica">A Clínica</a></li>
@@ -64,8 +69,75 @@
                                </ul>
                             </li>
                             <li class="menu-simples"><a href="#" title="Contato">Contato</a></li>
-                            <li class="menu-simples"><a href="javascript:void(0)" title="Faça uma pesquisa"><i class="fa fa-search"></i></a></li>
-                            <li class="menu-simples"><a href="javascript:void(0)" title="Abrir mais opções"><i class="fa fa-bars"></i></a></li>
+                            <li class="menu-simples text-center">
+                               <div class="form-group">
+                                   <input type="text" class="form-control" name="s" placeholder="Faça uma pesquisa">
+                               </div>
+                               <div class="form-group">
+                                   <button type="submit" class="btn btn-primary">PESQUISAR</button>
+                               </div>
+                            </li>
+                            
+                        </ul>
+                    </nav>
+
+                    <!-- SOCIAL -->
+                    <div class="social">
+                        <a href="#" target="_blank" title="Nosso perfil no Facebook">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#" target="_blank" title="Nosso perfil no Twitter">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" target="_blank" title="Nosso perfil no Linkedin">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="#" target="_blank" title="Nosso perfil no Instagram">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+
+                    </div>
+                    <!-- SOCIAL -->
+
+         </div>
+
+    </div>
+    <!-- MENU FLUTUANTE -->
+
+    <!-- HEADER -->
+    <header class="fixo">
+        <div class="container">
+            <div class="row">
+                
+                <!-- LOGO -->
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-9 col-9 logo">
+                    <a href="#" title="Santa Clara - Saúde Ocupacional">
+                        <img src="images/logo.png" alt="Santa Clara Logo">
+                    </a>
+                </div>
+                <!-- LOGO -->
+                
+                <!-- MENU DESKTOP -->
+                <div class="col-xl-9 col-lg-9 col-md-9 col-sm-3 col-3 menu-principal">
+                    <nav>
+                        <ul>
+                            <li class="ativo esconder-mobile"><a href="#" title="Home">Home</a></li>
+                            <li class="menu-simples esconder-mobile"><a href="#" title="A Clínica">A Clínica</a></li>
+                            <li class="menu-simples esconder-mobile"><a href="#" title="Serviços">Serviços</a></li>
+                            <li class="menu-simples esconder-mobile"><a href="#" title="Equipe">Equipe</a></li>
+                            <li class="menu-simples esconder-mobile"><a href="#" title="Dicas">Dicas</a></li>
+                            <li class="menu-simples esconder-mobile"><a href="#" title="Rede">Rede <i class="fa fa-angle-down"></i></a>
+                                <ul>
+                                   <li><a href="#" title="Nome do submenu">Nome do submenu</a></li>
+                                   <li><a href="#" title="Nome do submenu 2">Nome do submenu 2</a></li>
+                                   <li><a href="#" title="Nome do submenu 3">Nome do submenu 3</a></li>
+                                   <li><a href="#" title="Nome do submenu 4">Nome do submenu 4</a></li>
+                                   <li><a href="#" title="Nome do submenu 5">Nome do submenu 5</a></li>
+                               </ul>
+                            </li>
+                            <li class="menu-simples esconder-mobile"><a href="#" title="Contato">Contato</a></li>
+                            <li class="menu-simples esconder-mobile"><a href="javascript:void(0)" onclick="$('.busca-header').show();" title="Faça uma pesquisa"><i class="fa fa-search"></i></a></li>
+                            <li class="menu-simples"><a href="javascript:void(0)" onclick="abrirFecharMenu();" title="Abrir mais opções"><i class="fa fa-bars"></i></a></li>
                         </ul>
                     </nav>  
                 </div>
@@ -73,6 +145,76 @@
 
             </div>
         </div>
+        
+        <!-- BUSCA HEADER -->
+        <div class="busca-header">
+            <input type="text" name="s" class="form-control" placeholder="Faça uma pesquisa">
+            <div class="fechar-busca">
+                <a href="javascript:void(0)" title="Fechar busca" onclick="$('.busca-header').fadeOut(500);">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+        <!-- BUSCA HEADER --> 
+
+
+    </header>
+    <!-- HEADER -->
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="row">
+                
+                <!-- LOGO -->
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-9 col-9 logo">
+                    <a href="#" title="Santa Clara - Saúde Ocupacional">
+                        <img src="images/logo.png" alt="Santa Clara Logo">
+                    </a>
+                </div>
+                <!-- LOGO -->
+                
+                <!-- MENU DESKTOP -->
+                <div class="col-xl-9 col-lg-9 col-md-9 col-sm-3 col-3 menu-principal">
+                    <nav>
+                        <ul>
+                            <li class="ativo esconder-mobile"><a href="#" title="Home">Home</a></li>
+                            <li class="menu-simples esconder-mobile"><a href="#" title="A Clínica">A Clínica</a></li>
+                            <li class="menu-simples esconder-mobile"><a href="#" title="Serviços">Serviços</a></li>
+                            <li class="menu-simples esconder-mobile"><a href="#" title="Equipe">Equipe</a></li>
+                            <li class="menu-simples esconder-mobile"><a href="#" title="Dicas">Dicas</a></li>
+                            <li class="menu-simples esconder-mobile"><a href="#" title="Rede">Rede <i class="fa fa-angle-down"></i></a>
+                                <ul>
+                                   <li><a href="#" title="Nome do submenu">Nome do submenu</a></li>
+                                   <li><a href="#" title="Nome do submenu 2">Nome do submenu 2</a></li>
+                                   <li><a href="#" title="Nome do submenu 3">Nome do submenu 3</a></li>
+                                   <li><a href="#" title="Nome do submenu 4">Nome do submenu 4</a></li>
+                                   <li><a href="#" title="Nome do submenu 5">Nome do submenu 5</a></li>
+                               </ul>
+                            </li>
+                            <li class="menu-simples esconder-mobile"><a href="#" title="Contato">Contato</a></li>
+                            <li class="menu-simples esconder-mobile"><a href="javascript:void(0)" onclick="$('.busca-header').show();" title="Faça uma pesquisa"><i class="fa fa-search"></i></a></li>
+                            <li class="menu-simples"><a href="javascript:void(0)" onclick="abrirFecharMenu();" title="Abrir mais opções"><i class="fa fa-bars"></i></a></li>
+                        </ul>
+                    </nav>  
+                </div>
+                <!-- MENU DESKTOP -->
+
+            </div>
+        </div>
+        
+        <!-- BUSCA HEADER -->
+        <div class="busca-header">
+            <input type="text" name="s" class="form-control" placeholder="Faça uma pesquisa">
+            <div class="fechar-busca">
+                <a href="javascript:void(0)" title="Fechar busca" onclick="$('.busca-header').fadeOut(500);">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+        <!-- BUSCA HEADER --> 
+
+
     </header>
     <!-- HEADER -->
 
@@ -119,6 +261,13 @@
 
 
         </div>
+        <div class="controle-banner-na-homepage">
+           <div class="owl-theme">
+             <div class="owl-controls">
+                <div class="custom-nav-banner owl-nav"></div>
+             </div>
+          </div>
+        </div>
     </section>
     <!-- SUPER BANNER -->
 
@@ -129,17 +278,18 @@
             <div class="row">
                 
                 <!-- COLUNA UM -->
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 coluna-um">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 coluna-um wow fadeInDown">
                      <!-- CAIXA DESTAQUE -->
                      <div class="caixa-destaque">
                          <!-- CAPA DO DESTAQUE -->
                          <div class="capa-destaque" style="background: url('images/mini-destaque.png') #f2f2f2 no-repeat;background-size: cover;background-position: center center;">
-                             <a href="#" title="AUDIOMETRIA">
+                             <a href="#" title="AUDIOMETRIA" class="link wow fadeInLeft" data-wow-delay="0.2s">
                                  AUDIOMETRIA
                              </a>
                          </div>
                          <!-- CAPA DO DESTAQUE -->
-                         <h2> Por conseguinte, a mobilidade dos capitais internacionais aponta para a melhoria das condições financeiras e administrativas exigidas.</h2>
+                         <h2>Ut wisi enim</h2>
+                         <p> Por conseguinte, a mobilidade dos capitais internacionais aponta para a melhoria das condições financeiras e administrativas exigidas.</p>
                          <p>
                              <a href="#" title="LEIA MAIS">
                                  LEIA MAIS <i class="fa fa-angle-right"></i>
@@ -151,17 +301,18 @@
                 <!-- COLUNA UM -->
 
                 <!-- COLUNA DOIS -->
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 coluna-dois">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 coluna-dois wow fadeInDown" data-wow-delay="0.2s">
                      <!-- CAIXA DESTAQUE -->
                      <div class="caixa-destaque">
                          <!-- CAPA DO DESTAQUE -->
                          <div class="capa-destaque" style="background: url('images/mini-destaque.png') #f2f2f2 no-repeat;background-size: cover;background-position: center center;">
-                             <a href="#" title="AUDIOMETRIA">
+                             <a href="#" title="AUDIOMETRIA" class="link wow fadeInLeft" data-wow-delay="0.5s">
                                  AUDIOMETRIA
                              </a>
                          </div>
                          <!-- CAPA DO DESTAQUE -->
-                         <h2> Por conseguinte, a mobilidade dos capitais internacionais aponta para a melhoria das condições financeiras e administrativas exigidas.</h2>
+                         <h2>Ut wisi enim</h2>
+                         <p> Por conseguinte, a mobilidade dos capitais internacionais aponta para a melhoria das condições financeiras e administrativas exigidas.</p>
                          <p>
                              <a href="#" title="LEIA MAIS">
                                  LEIA MAIS <i class="fa fa-angle-right"></i>
@@ -173,7 +324,7 @@
                 <!-- COLUNA DOIS -->
 
                 <!-- COLUNA TRES -->
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 coluna-tres">
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 coluna-tres wow fadeInDown" data-wow-delay="0.4s">
                      <div class="caixa-agendamento">
                          <h2>
                              <small>ESTAMOS AQUI PARA AJUDAR VOCÊ</small>
@@ -246,93 +397,157 @@
                 <!-- PÁGINAS -->
                 <div class="row">
                     
-                      <div id="carouselTimeline" class="carousel slide" data-ride="carousel">
+                      <div id="carouselTimeline" class="carousel slide carousel-fade" data-ride="carousel">
                           
                           <div class="carousel-inner">
                             
                             <!-- PÁGINA -->
                             <div class="carousel-item active">
                                 <div class="row">
-                                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 offset-xl-1 offset-lg-1 offset-md-1 offset-sm-1 col-12">
-                                        <!-- COLUNA UM -->
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 coluna-um">
-                                            <div class="destaque-oval" style="background: url('images/destaque-oval.png') #f2f2f2 no-repeat;background-size: cover;background-position: center center;">
-                                                &nbsp;
+                                             <!-- COLUNA UM -->
+                                            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 offset-xl-1 offset-lg-1 offset-md-1 offset-sm-1 col-12 coluna-um">
+                                                <div class="destaque-oval" style="background: url('images/destaque-oval.png') #f2f2f2 no-repeat;background-size: cover;background-position: center center;">
+                                                    &nbsp;
+                                                </div>
                                             </div>
-                                        </div>
-                                        <!-- COLUNA UM -->
-                                        <!-- COLUNA DOIS -->
-                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 coluna-dois">
-                                            <h3>Podemos já vislumbrar o modo pelo qual a mobilidade dos capitais internacionais exige a precisão e a definição do levantamento das variáveis envolvidas.</h3>
-                                            <p>O incentivo ao avanço tecnológico, assim como a consulta aos diversos militantes não pode mais se dissociar de alternativas às soluções ortodoxas. Acima de tudo, é fundamental ressaltar que o entendimento das metas propostas pode nos levar a considerar a reestruturação das direções preferenciais no sentido do progresso.</p>
-                                            <p>
-                                                <a href="#" title="SAIBA MAIS">
-                                                    SAIBA MAIS
-                                                </a>
-                                            </p>
-                                        </div>
-                                        <!-- COLUNA DOIS -->
-                                    </div>
-                                </div>
+                                            <!-- COLUNA UM -->
+                                            <!-- COLUNA DOIS -->
+                                            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-12 coluna-dois">
+                                                <h3>Item 1 2016, Podemos já vislumbrar o modo pelo qual a mobilidade dos capitais internacionais exige a precisão e a definição do levantamento das variáveis envolvidas.</h3>
+                                                <p>O incentivo ao avanço tecnológico, assim como a consulta aos diversos militantes não pode mais se dissociar de alternativas às soluções ortodoxas. Acima de tudo, é fundamental ressaltar que o entendimento das metas propostas pode nos levar a considerar a reestruturação das direções preferenciais no sentido do progresso.</p>
+                                                <p style="opacity: 1 !important;">
+                                                    <a href="#" class="link" title="SAIBA MAIS">
+                                                        SAIBA MAIS
+                                                    </a>
+                                                </p>
+                                            </div>
+                                            <!-- COLUNA DOIS -->
+                                     </div>
                             </div>
                             <!-- PÁGINA -->
 
                             <!-- PÁGINA -->
                             <div class="carousel-item">
                                     <div class="row">
-                                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 offset-xl-1 offset-lg-1 offset-md-1 offset-sm-1 col-12">
-                                            <!-- COLUNA UM -->
-                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 coluna-um">
+                                             <!-- COLUNA UM -->
+                                            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 offset-xl-1 offset-lg-1 offset-md-1 offset-sm-1 col-12 coluna-um">
                                                 <div class="destaque-oval" style="background: url('images/destaque-oval.png') #f2f2f2 no-repeat;background-size: cover;background-position: center center;">
                                                     &nbsp;
                                                 </div>
                                             </div>
                                             <!-- COLUNA UM -->
                                             <!-- COLUNA DOIS -->
-                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 coluna-dois">
-                                                <h3>Podemos já vislumbrar o modo pelo qual a mobilidade dos capitais internacionais exige a precisão e a definição do levantamento das variáveis envolvidas.</h3>
+                                            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-12 coluna-dois">
+                                                <h3>Item 2 2017, Podemos já vislumbrar o modo pelo qual a mobilidade dos capitais internacionais exige a precisão e a definição do levantamento das variáveis envolvidas.</h3>
                                                 <p>O incentivo ao avanço tecnológico, assim como a consulta aos diversos militantes não pode mais se dissociar de alternativas às soluções ortodoxas. Acima de tudo, é fundamental ressaltar que o entendimento das metas propostas pode nos levar a considerar a reestruturação das direções preferenciais no sentido do progresso.</p>
-                                                <p>
-                                                    <a href="#" title="SAIBA MAIS">
+                                                <p style="opacity: 1 !important;">
+                                                    <a href="#" class="link" title="SAIBA MAIS">
                                                         SAIBA MAIS
                                                     </a>
                                                 </p>
                                             </div>
                                             <!-- COLUNA DOIS -->
-                                        </div>
-                                </div>
+                                     </div>
                             </div>
                             <!-- PÁGINA -->
 
                             <!-- PÁGINA -->
                             <div class="carousel-item">
                                   <div class="row">
-                                        <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10 offset-xl-1 offset-lg-1 offset-md-1 offset-sm-1 col-12">
-                                            <!-- COLUNA UM -->
-                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 coluna-um">
+                                             <!-- COLUNA UM -->
+                                            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 offset-xl-1 offset-lg-1 offset-md-1 offset-sm-1 col-12 coluna-um">
                                                 <div class="destaque-oval" style="background: url('images/destaque-oval.png') #f2f2f2 no-repeat;background-size: cover;background-position: center center;">
                                                     &nbsp;
                                                 </div>
                                             </div>
                                             <!-- COLUNA UM -->
                                             <!-- COLUNA DOIS -->
-                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 coluna-dois">
-                                                <h3>Podemos já vislumbrar o modo pelo qual a mobilidade dos capitais internacionais exige a precisão e a definição do levantamento das variáveis envolvidas.</h3>
+                                            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-12 coluna-dois">
+                                                <h3>Item 3 2018, Podemos já vislumbrar o modo pelo qual a mobilidade dos capitais internacionais exige a precisão e a definição do levantamento das variáveis envolvidas.</h3>
                                                 <p>O incentivo ao avanço tecnológico, assim como a consulta aos diversos militantes não pode mais se dissociar de alternativas às soluções ortodoxas. Acima de tudo, é fundamental ressaltar que o entendimento das metas propostas pode nos levar a considerar a reestruturação das direções preferenciais no sentido do progresso.</p>
-                                                <p>
-                                                    <a href="#" title="SAIBA MAIS">
+                                                <p style="opacity: 1 !important;">
+                                                    <a href="#" class="link" title="SAIBA MAIS">
                                                         SAIBA MAIS
                                                     </a>
                                                 </p>
                                             </div>
                                             <!-- COLUNA DOIS -->
-                                        </div>
-                                </div>
+                                     </div>
+                            </div>
+                            <!-- PÁGINA -->
+
+
+                            <!-- PÁGINA -->
+                            <div class="carousel-item">
+                                  <div class="row">
+                                             <!-- COLUNA UM -->
+                                            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 offset-xl-1 offset-lg-1 offset-md-1 offset-sm-1 col-12 coluna-um">
+                                                <div class="destaque-oval" style="background: url('images/destaque-oval.png') #f2f2f2 no-repeat;background-size: cover;background-position: center center;">
+                                                    &nbsp;
+                                                </div>
+                                            </div>
+                                            <!-- COLUNA UM -->
+                                            <!-- COLUNA DOIS -->
+                                            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-12 coluna-dois">
+                                                <h3>Item 4 2019, Podemos já vislumbrar o modo pelo qual a mobilidade dos capitais internacionais exige a precisão e a definição do levantamento das variáveis envolvidas.</h3>
+                                                <p>O incentivo ao avanço tecnológico, assim como a consulta aos diversos militantes não pode mais se dissociar de alternativas às soluções ortodoxas. Acima de tudo, é fundamental ressaltar que o entendimento das metas propostas pode nos levar a considerar a reestruturação das direções preferenciais no sentido do progresso.</p>
+                                                <p style="opacity: 1 !important;">
+                                                    <a href="#" class="link" title="SAIBA MAIS">
+                                                        SAIBA MAIS
+                                                    </a>
+                                                </p>
+                                            </div>
+                                            <!-- COLUNA DOIS -->
+                                     </div>
+                            </div>
+                            <!-- PÁGINA -->
+
+
+                            <!-- PÁGINA -->
+                            <div class="carousel-item">
+                                  <div class="row">
+                                             <!-- COLUNA UM -->
+                                            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 offset-xl-1 offset-lg-1 offset-md-1 offset-sm-1 col-12 coluna-um">
+                                                <div class="destaque-oval" style="background: url('images/destaque-oval.png') #f2f2f2 no-repeat;background-size: cover;background-position: center center;">
+                                                    &nbsp;
+                                                </div>
+                                            </div>
+                                            <!-- COLUNA UM -->
+                                            <!-- COLUNA DOIS -->
+                                            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-12 coluna-dois">
+                                                <h3>Item 5 2020, Podemos já vislumbrar o modo pelo qual a mobilidade dos capitais internacionais exige a precisão e a definição do levantamento das variáveis envolvidas.</h3>
+                                                <p>O incentivo ao avanço tecnológico, assim como a consulta aos diversos militantes não pode mais se dissociar de alternativas às soluções ortodoxas. Acima de tudo, é fundamental ressaltar que o entendimento das metas propostas pode nos levar a considerar a reestruturação das direções preferenciais no sentido do progresso.</p>
+                                                <p style="opacity: 1 !important;">
+                                                    <a href="#" class="link" title="SAIBA MAIS">
+                                                        SAIBA MAIS
+                                                    </a>
+                                                </p>
+                                            </div>
+                                            <!-- COLUNA DOIS -->
+                                     </div>
                             </div>
                             <!-- PÁGINA -->
                           
                           </div>
                           
+                          <ol class="carousel-indicators">
+                            <li data-target="#carouselTimeline" data-slide-to="0" class="active">
+                                2016 <span><d>&nbsp;</d></span>
+                            </li>
+                            <li data-target="#carouselTimeline" data-slide-to="1">
+                                2017 <span><d>&nbsp;</d></span>
+                            </li>
+                            <li data-target="#carouselTimeline" data-slide-to="2">
+                                2018 <span><d>&nbsp;</d></span>
+                            </li>
+                            <li data-target="#carouselTimeline" data-slide-to="3">
+                                2019 <span><d>&nbsp;</d></span>
+                            </li>
+                            <li data-target="#carouselTimeline" data-slide-to="4">
+                                2020 <span><d>&nbsp;</d></span>
+                            </li>
+                          </ol>
+
 
                         </div>
 
@@ -342,23 +557,7 @@
                 <!-- INDICADORES -->
                 <div class="row">
                     <div class="col-12">
-                         <ol class="carousel-indicators">
-                            <li data-target="#carouselTimeline" data-slide-to="0" class="active">
-                                2012
-                            </li>
-                            <li data-target="#carouselTimeline" data-slide-to="1">
-                                2013
-                            </li>
-                            <li data-target="#carouselTimeline" data-slide-to="2">
-                                2014
-                            </li>
-                            <li data-target="#carouselTimeline" data-slide-to="3">
-                                2015
-                            </li>
-                            <li data-target="#carouselTimeline" data-slide-to="4">
-                                2016
-                            </li>
-                          </ol>
+                         
                     </div>
                 </div>
                 <!-- INDICADORES -->
@@ -471,29 +670,29 @@
             <div class="row">
                 
                 <!-- COLUNA UM -->
-                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 coluna-estatisticas">
-                    <h3><span>10</span><small>&nbsp;</small></h3>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 coluna-estatisticas coluna-um">
+                    <h3><span>0</span><small>&nbsp;</small></h3>
                     <p>Serviços Prestados</p>
                 </div>
                 <!-- COLUNA UM -->
 
                 <!-- COLUNA DOIS -->
-                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 coluna-estatisticas">
-                    <h3><span>146</span><small>&nbsp;</small></h3>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 coluna-estatisticas coluna-dois">
+                    <h3><span>0</span><small>&nbsp;</small></h3>
                     <p>Exames Realizados</p>
                 </div>
                 <!-- COLUNA DOIS -->
 
                 <!-- COLUNA TRES -->
-                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 coluna-estatisticas">
-                    <h3><span>388</span><small>&nbsp;</small></h3>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 coluna-estatisticas coluna-tres">
+                    <h3><span>0</span><small>&nbsp;</small></h3>
                     <p>Clientes Satisfeitos</p>
                 </div>
                 <!-- COLUNA TRES -->
 
                 <!-- COLUNA QUATRO -->
-                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 coluna-estatisticas">
-                    <h3><span>1280</span><small>&nbsp;</small></h3>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 coluna-estatisticas coluna-quatro">
+                    <h3><span>0</span><small>&nbsp;</small></h3>
                     <p>Pessoas Atendidas</p>
                 </div>
                 <!-- COLUNA QUATRO -->
@@ -512,7 +711,7 @@
             
             <!-- TITULO -->
             <div class="row">
-                <div class="col-12 titulo">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 offset-xl-3 offset-lg-3 offset-md-3 offset-sm-3 col-12 titulo">
                     <h2>Ut wisi enim ad <span>&nbsp;</span></h2>
                     <p>Não obstante, o comprometimento entre as equipes talvez venha a ressaltar a relatividade das condições financeiras e administrativas exigidas.</p>
                 </div>
@@ -524,8 +723,8 @@
             <div class="row">
                 
                 <!-- COLUNA UM -->
-                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 caixas coluna-um">
-                     <div class="icone" style="background: url('images/icone1.png') #f2f2f2 no-repeat;background-size: cover;background-position: center center;">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 caixas coluna-um wow fadeInDown" data-wow-delay="0.2s">
+                     <div class="icone" style="background: url('images/icone1.png') #fff no-repeat;background-size: 45px auto;background-position: center center;">
                         <a href="#" title="Exerci tation">
                             &nbsp;
                         </a>
@@ -540,8 +739,8 @@
                 <!-- COLUNA UN -->
 
                 <!-- COLUNA DOIS -->
-                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 coluna-um">
-                    <div class="icone" style="background: url('images/icone2.png') #f2f2f2 no-repeat;background-size: cover;background-position: center center;">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 caixas coluna-dois wow fadeInDown" data-wow-delay="0.4s">
+                    <div class="icone" style="background: url('images/icone2.png') #fff no-repeat;background-size: 45px auto;background-position: center center;">
                         <a href="#" title="Exerci tation">
                             &nbsp;
                         </a>
@@ -556,8 +755,8 @@
                 <!-- COLUNA DOIS -->
 
                 <!-- COLUNA TRES -->
-                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 coluna-um">
-                    <div class="icone" style="background: url('images/icone3.png') #f2f2f2 no-repeat;background-size: cover;background-position: center center;">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 caixas coluna-tres wow fadeInDown" data-wow-delay="0.6s">
+                    <div class="icone" style="background: url('images/icone3.png') #fff no-repeat;background-size: 45px auto;background-position: center center;">
                         <a href="#" title="Exerci tation">
                             &nbsp;
                         </a>
@@ -572,8 +771,8 @@
                 <!-- COLUNA TRES -->
 
                 <!-- COLUNA QUATRO -->
-                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 coluna-um">
-                    <div class="icone" style="background: url('images/icone4.png') #f2f2f2 no-repeat;background-size: cover;background-position: center center;">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12 caixas coluna-quatro wow fadeInDown" data-wow-delay="0.8s">
+                    <div class="icone" style="background: url('images/icone4.png') #fff no-repeat;background-size: 45px auto;background-position: center center;">
                         <a href="#" title="Exerci tation">
                             &nbsp;
                         </a>
@@ -601,7 +800,7 @@
         <div class="container">
             <div class="row">
                 
-                <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12 conteudo-destaque">
+                <div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-xs-12 conteudo-destaque wow fadeInDown" data-wow-delay="0.2s">
                     <h2>
                         Exerci tation ullamcoper
                         Exerci tation ullamcoper
@@ -676,26 +875,60 @@
 
                 <!-- COLUNA TRES -->
                 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 coluna-tres">
-                    <h3>Últimos Posts</h3>
+                    <h3>Últimas Dicas</h3>
+                    
+                    <ul>
+                        <li>
+                            <a href="#" title="Titulo do Post">
+                                <div class="capa-dica" style="background: url('images/destaque-em-imagem-2.png') #f2f2f2 no-repeat;background-size: cover;background-position: center center;">&nbsp;</div>
+                                Título do post<br>
+                                <span>15 de Julho</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Titulo do Post">
+                                <div class="capa-dica" style="background: url('images/destaque-em-imagem-2.png') #f2f2f2 no-repeat;background-size: cover;background-position: center center;">&nbsp;</div>
+                                Título do post<br>
+                                <span>15 de Julho</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Titulo do Post">
+                                <div class="capa-dica" style="background: url('images/destaque-em-imagem-2.png') #f2f2f2 no-repeat;background-size: cover;background-position: center center;">&nbsp;</div>
+                                Título do post<br>
+                                <span>15 de Julho</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Titulo do Post">
+                                <div class="capa-dica" style="background: url('images/destaque-em-imagem-2.png') #f2f2f2 no-repeat;background-size: cover;background-position: center center;">&nbsp;</div>
+                                Título do post<br>
+                                <span>15 de Julho</span>
+                            </a>
+                        </li>
+                    </ul>
+
                 </div>
                 <!-- COLUNA TRES -->
 
                 <!-- COLUNA QUATRO -->
                 <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 coluna-quatro">
-                    <h3><i class="fa fa-clock-o" aria-hidden="true"></i></h3>
-                    <ul>
-                        <li>SEGUNDA-FEIRA      <span>08hr - 18hr</span></li>
-                        <li>TERÇA-FEIRA        <span>08hr - 18hr</span></li>
-                        <li>QUARTA-FEIRA       <span>08hr - 18hr</span></li>
-                        <li>QUINTA-FEIRA       <span>08hr - 18hr</span></li>
-                        <li>SEXTA-FEIRA        <span>08hr - 18hr</span></li>
-                        <li>SÁBADOS-FERIADOS   <span>08hr - 18hr</span></li>
-                    </ul>
-                    <p>
-                        <a href="#" title="AGENDAR EXAME" class="btn btn-primary">
-                            AGENDAR EXAME
-                        </a>
-                    </p>
+                    <div class="agenda-rodape">
+                        <h3><i class="fa fa-clock-o" aria-hidden="true"></i></h3>
+                        <ul>
+                            <li>SEGUNDA-FEIRA      <span>08hr - 18hr</span></li>
+                            <li>TERÇA-FEIRA        <span>08hr - 18hr</span></li>
+                            <li>QUARTA-FEIRA       <span>08hr - 18hr</span></li>
+                            <li>QUINTA-FEIRA       <span>08hr - 18hr</span></li>
+                            <li>SEXTA-FEIRA        <span>08hr - 18hr</span></li>
+                            <li>SÁBADOS-FERIADOS   <span>08hr - 18hr</span></li>
+                        </ul>
+                        <p>
+                            <a href="#" title="AGENDAR EXAME" class="btn btn-primary">
+                                AGENDAR EXAME
+                            </a>
+                        </p>
+                    </div>
                 </div>
                 <!-- COLUNA QUATRO -->
 
@@ -728,6 +961,7 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
     <script src="js/owl.carousel.js"></script>
+    <script type="text/javascript" src="js/jquery.animateNumber.min.js"></script>
 
     <script type="text/javascript" src="js/scripts.js"></script>
     <script type="text/javascript" src="js/sweetalert2.min.js"></script>
